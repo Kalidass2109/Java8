@@ -2,6 +2,7 @@ package com.java8.features.lambdas;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class PersonRepository {
 	
@@ -18,6 +19,10 @@ public class PersonRepository {
 	
 	public static Person getPerson() {
 		return new Person("Priya",166,6000,"Female",2,Arrays.asList("reading","writing","listening"));
+	}
+	
+	public static Optional<Person> getPersonOptional() {
+		return Optional.of(getPerson());
 	}
 
 }

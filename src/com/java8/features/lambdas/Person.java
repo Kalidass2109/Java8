@@ -10,6 +10,10 @@ public class Person {
 	private String gender;
 	private int kids;
 	List<String> hobbies=new ArrayList<>();
+	
+	public Person() {
+		super();
+	}
 
 	public Person(String name, int height, double salary, String gender, int kids, List<String> hobbies) {
 		super();
