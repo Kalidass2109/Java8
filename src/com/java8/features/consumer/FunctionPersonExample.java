@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import com.java8.features.lambdas.Person;
-import com.java8.features.lambdas.PersonRepository;
+import com.java8.features.repo.Person;
+import com.java8.features.repo.PersonRepository;
 
 public class FunctionPersonExample {
 

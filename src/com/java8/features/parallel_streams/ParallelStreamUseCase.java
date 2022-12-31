@@ -3,8 +3,8 @@ package com.java8.features.parallel_streams;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.java8.features.lambdas.Person;
-import com.java8.features.lambdas.PersonRepository;
+import com.java8.features.repo.Person;
+import com.java8.features.repo.PersonRepository;
 
 public class ParallelStreamUseCase {
 

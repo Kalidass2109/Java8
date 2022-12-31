@@ -3,8 +3,8 @@ package com.java8.features.streams;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-import com.java8.features.lambdas.Person;
-import com.java8.features.lambdas.PersonRepository;
+import com.java8.features.repo.Person;
+import com.java8.features.repo.PersonRepository;
 
 public class StreamFindAnyFirstExample {
 	static Predicate<String> p1=num->num.length()>7;
