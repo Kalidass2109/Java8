@@ -95,7 +95,7 @@ public class Practice {
 		 //11. Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 		 System.out.println("Return true if any value appears at least twice in the array, and return false if every element is distinct");
 		 int[] nums= {1,2,3,1};
-		 List<Integer> numList= Arrays.stream(nums).boxed().collect(Collectors.toList());
+		 List<Integer> numList= Arrays.stream(nums).boxed().collect(Collectors.toList()); //boxed method will be used to convert primitive type to Wrapper class
 		 Set<Integer> set1=new HashSet<>(numList);
 		 if(set1.size()==list.size()) {
 			 System.out.println("False");
