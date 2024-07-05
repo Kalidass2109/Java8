@@ -193,7 +193,25 @@ public class Practice {
 		 .map(String::toLowerCase).collect(Collectors.groupingBy(str->str, LinkedHashMap::new, Collectors.counting()));
 		 System.out.println(countOfChar);
 		 
-		 
+		 List<Integer> list = Arrays.asList(9,8,7,1, 0, 3, 13,6,6,4, 5, 4, 4, 5, 8, 1, 10,3,1);
+		//23. print like mentioned below
+		//Non-duplicate elements-->[9, 8, 7, 1, 0, 3, 13, 6, 4, 5, 10] 
+		//duplicate elements-->[6, 4, 4, 5, 8, 1, 3, 1]		
+		Set<Integer> set=new LinkedHashSet<>();
+		List<Integer> nonDuplicate = list.stream().filter(num->!set.add(num)).collect(Collectors.toList());
+		System.out.println("Non-duplicate elements : "+set);
+		System.out.println("duplicate elements : "+nonDuplicate);
+
+		//24. Print the count of all duplicate elements
+		Map<Integer, Long> numCountMap = list.stream().filter(num-> Collections.frequency(list, num)>1)
+		.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		System.out.println("numCountMap : "+numCountMap); //numCountMap : {1=3, 3=2, 4=3, 5=2, 6=2, 8=2}
+
+		//25. Give a string, make every word's first letter capital
+		String convertedStr = Arrays.stream(str.split("\\s+"))
+	        .map(word -> Character.toUpperCase(word.charAt(0)) + word.substring(1))
+	        .collect(Collectors.joining(" "));
+		System.out.println("convertedStr : "+convertedStr); //convertedStr : My Name Is Java
 		 
 	}
 
